@@ -46,7 +46,7 @@ O **TCP/IP** (*Transmission Control Protocol/Internet Protocol*) é um conjunto 
 
 Ao instalar ou iniciar o Docker no Windows, caso tenha a mensagem de erro abaixo:
 
-![Erro WSL Kernel Version](caminho_da_imagem/erro_wsl_kernel_version.png)
+![Erro WSL Kernel Version](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap01_ContainerDocker/erro_wsl_kernel_version.png))
 
 Basta fazer o que consta na mensagem e atualizar o WSL. Abra o prompt de comando e então execute:
 
