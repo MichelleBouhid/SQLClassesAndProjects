@@ -55,9 +55,6 @@ Ao instalar ou iniciar o Docker no Windows, caso tenha a mensagem de erro abaixo
 ![Erro WSL Kernel Version](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap01_ContainerDocker/erro_wsl_kernel_version.png)
  Abra o prompt de comando e então execute:
 
-```bash
-wsl --update
-
 ### Links Úteis
 
 - [PostgreSQL](https://www.postgresql.org/)
