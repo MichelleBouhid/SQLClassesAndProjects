@@ -30,6 +30,11 @@ Neste capítulo, aprendemos como configurar e criar um container Docker rodando 
 1. Instale o **pgAdmin** conforme as instruções do curso para gerenciar o banco de dados.
 2. Crie uma senha master ao acessar o **pgAdmin** pela primeira vez (sugestão: `dsa1010`).
 
+Abaixo está a configuração utilizada no **pgAdmin** para conectar ao banco de dados quando registrar o server:
+
+![Configuração do Servidor no pgAdmin](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap01_ContainerDocker/config_pgadmin.png)
+   
+
 ## 2. Conceitos Fundamentais: TCP/IP
 
 ### O que é TCP/IP?
