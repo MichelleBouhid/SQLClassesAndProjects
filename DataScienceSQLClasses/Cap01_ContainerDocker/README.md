@@ -34,6 +34,7 @@ Abaixo está a configuração utilizada no **pgAdmin** para conectar ao banco de
 
 ![Configuração do Servidor no pgAdmin](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap01_ContainerDocker/config_pgadmin.png)
    
+![Configuração do Servidor no pgAdmin2](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap01_ContainerDocker/pgadminfinal.png)
 
 ## 2. Conceitos Fundamentais: TCP/IP
 
