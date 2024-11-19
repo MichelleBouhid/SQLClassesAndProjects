@@ -58,6 +58,11 @@ Ao instalar ou iniciar o Docker no Windows, caso tenha a mensagem de erro abaixo
 ```bash
 wsl --update
 
+### Links Úteis
+
+- [PostgreSQL](https://www.postgresql.org/)
+- [pgAdmin](https://www.pgadmin.org/)
+- [Docker](https://www.docker.com/)
 
 
 
