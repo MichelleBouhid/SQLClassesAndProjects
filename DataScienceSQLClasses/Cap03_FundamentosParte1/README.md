@@ -18,15 +18,13 @@ Os filtros de colunas determinam quais colunas serão exibidas no resultado da c
 Os filtros de linhas são usados para limitar os dados retornados com base em condições definidas. Eles são aplicados na cláusula WHERE
 
 - Coluna e linha juntos:
-```sql
-SELECT * FROM usuarios WHERE idade = 30;
+    ```sql
+  SELECT * FROM usuarios WHERE idade = 30;
 
-SELECT * FROM pagamentos WHERE data_pagamento IS NULL;
-
-
+  SELECT * FROM pagamentos WHERE data_pagamento IS NULL;
 
 
-## Operadores Lógicos x Operadores Relacionais
+### **Operadores Lógicos x Operadores Relacionais**
 
 Em SQL, tanto os operadores relacionais quanto os lógicos são usados para definir condições em consultas, mas eles têm propósitos diferentes.
 
