@@ -1,4 +1,30 @@
 
+## Filtros de Colunas e Filtros de Linhas
+
+No SQL, os filtros são usados para refinar os dados retornados em uma consulta, seja restringindo as colunas exibidas ou selecionando apenas as linhas que atendem a certas condições.
+
+---
+
+### **Filtros de Colunas**
+
+Os filtros de colunas determinam quais colunas serão exibidas no resultado da consulta. Eles são usados na cláusula **`SELECT`** e podem incluir:
+
+- Colunas específicas: Você pode listar apenas as colunas que deseja exibir.
+  ```sql
+  SELECT nome, idade FROM usuarios;
+
+### **Filtros de Linhas**
+
+Os filtros de linhas são usados para limitar os dados retornados com base em condições definidas. Eles são aplicados na cláusula WHERE
+
+- Coluna e linha juntos:
+```sql
+SELECT * FROM usuarios WHERE idade = 30;
+
+SELECT * FROM pagamentos WHERE data_pagamento IS NULL;
+
+
+
 
 ## Operadores Lógicos x Operadores Relacionais
 
