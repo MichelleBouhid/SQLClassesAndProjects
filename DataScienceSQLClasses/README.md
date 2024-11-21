@@ -6,3 +6,12 @@ This repository contains the materials from the SQL course offered by Data Scien
 SQL Syntax
 
 https://www.postgresql.org/docs/current/sql-syntax.html
+
+Subconsultas no SQL Server
+
+https://learn.microsoft.com/pt-br/sql/relational-databases/performance/subqueries
+
+Editor SQL Online
+
+http://sqlfiddle.com
+
