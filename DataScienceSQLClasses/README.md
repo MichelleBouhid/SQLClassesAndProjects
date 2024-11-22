@@ -15,3 +15,4 @@ Editor SQL Online
 
 http://sqlfiddle.com
 
+OBS: Os capítulo do título e dos exercicios estão com gap de 1, porque preferi acompanhar o código igual nas aulas.
