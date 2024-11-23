@@ -156,4 +156,4 @@ SELECT
 FROM tabela;
 
 
-
+OBS: Para salvar em pdf: Tabela, botao direito, import export data
