@@ -86,6 +86,7 @@ Em One-Hot Encoding, para cada categoria da variável categórica, é criada uma
 
 A escolha entre Label Encoding e One-Hot Encoding deve ser feita com base no tipo de modelo que se planeja usar e na natureza da variável categórica.
 
+One-Hot Encoding: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing
 
 4. **Ordinal Encoding**:
    
