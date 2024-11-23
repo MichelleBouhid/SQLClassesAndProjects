@@ -42,6 +42,7 @@ Encoding é o processo de transformar dados categóricos ou textuais em um forma
 Existem diferentes tipos de encoding que podem ser aplicados dependendo da natureza dos dados e do objetivo da análise:
 
 1. **Label Encoding**:
+   
    - Converte cada valor categórico em um número único.
    - Exemplo: Para as categorias ["Baixo", "Médio", "Alto"], o encoding poderia ser:
      - "Baixo" → 0
@@ -49,8 +50,9 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
      - "Alto" → 2
    - É simples e eficiente, mas pode introduzir uma ordem implícita que nem sempre é apropriada.
 
-2. **One-Hot Encoding**:
-   **Descrição**: Cada categoria única de uma variável é convertida em uma nova coluna binária (com valores 0 ou 1).
+3. **One-Hot Encoding**: (Criação de variáveis Dummy)
+   
+   - Cada categoria única de uma variável é convertida em uma nova coluna binária (com valores 0 ou 1).
    - Cria uma nova coluna para cada valor único da variável categórica e preenche com 0 ou 1, indicando a presença do valor.
    - Exemplo: Para a categoria "Cor" com valores ["Vermelho", "Azul", "Verde"], o resultado seria:
      - "Vermelho" → [1, 0, 0]
@@ -59,6 +61,7 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
    - É mais adequado para variáveis sem ordem (nominais), mas pode aumentar muito o número de colunas se houver muitas categorias.
 
 4. **Ordinal Encoding**:
+   
    - Similar ao Label Encoding, mas aplicado a variáveis ordinais, onde há uma relação de ordem entre os valores.
    - Exemplo: Para as categorias ["Pequeno", "Médio", "Grande"], o encoding poderia ser:
      - "Pequeno" → 1
@@ -66,7 +69,7 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
      - "Grande" → 3
    - Preserva a relação de ordem entre os valores.
 
-5. **Frequency Encoding**:
+6. **Frequency Encoding**:
    - Substitui cada categoria pela frequência com que ela aparece nos dados.
    - Exemplo: Se "Vermelho" aparece 50 vezes, "Azul" 30 vezes, e "Verde" 20 vezes, o encoding seria:
      - "Vermelho" → 50
@@ -74,7 +77,8 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
      - "Verde" → 20
    - Útil para lidar com categorias raras.
 
-6. **Target Encoding**:
+7. **Target Encoding**:
+   
    - Substitui cada categoria pela média da variável alvo para aquela categoria.
    - Exemplo: Em um problema de regressão, se "Vermelho" tem uma média alvo de 75, "Azul" de 60, e "Verde" de 80, o encoding seria:
      - "Vermelho" → 75
@@ -82,7 +86,8 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
      - "Verde" → 80
    - Pode introduzir viés e precisa ser usado com cuidado.
 
-7. **Codificação Baseada em Aprendizado (Embedding Encoding)**:
+9. **Codificação Baseada em Aprendizado (Embedding Encoding)**:
+    
   - Usada principalmente com redes neurais, onde categorias são representadas como vetores densos em um espaço n-dimensional. Esses vetores são aprendidos durante o treinamento da rede neural.
 - **Aplicação**: Muito usada em Inteligência Artificial.
 
