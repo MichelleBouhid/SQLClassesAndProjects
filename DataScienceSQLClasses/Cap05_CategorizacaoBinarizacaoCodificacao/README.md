@@ -55,7 +55,7 @@ Existem diferentes tipos de encoding que podem ser aplicados dependendo da natur
 - Economiza espaço, pois você tem apenas uma coluna com valores inteiros em vez de várias colunas binárias.
 - Pode ser útil para modelos baseados em árvore (como árvores de decisão e random forests) que são capazes de lidar com variáveis categóricas codificadas dessa forma.
 
-      ### Desvantagens:
+   ### Desvantagens:
 
 - Introduz uma ordem arbitrária às categorias, o que pode não ser representativo da natureza da variável. Por exemplo, se tivermos uma variável "cor" com valores "vermelho", "azul" e "verde", e eles são codificados como 1, 2 e 3 respectivamente, isso pode sugerir que "verde" (3) é de alguma forma "maior" ou "melhor" do que "azul" (2) e "vermelho" (1), o que pode não ser verdadeiro e pode levar a resultados indesejados em alguns modelos.
 
@@ -74,12 +74,12 @@ Em One-Hot Encoding, para cada categoria da variável categórica, é criada uma
      - "Verde" → [0, 0, 1]
    - É mais adequado para variáveis sem ordem (nominais), mas pode aumentar muito o número de colunas se houver muitas categorias.
   
-     ### Vantagens:
+   ### Vantagens:
 
 - Não introduz uma ordem arbitrária às categorias.
 - É útil para muitos modelos lineares, redes neurais e outros modelos que não tratam bem variáveis categóricas com Label Encoding.
 
-      ### Desvantagens:
+  ### Desvantagens:
 
 - Pode aumentar significativamente a dimensionalidade do dataset, especialmente se a variável categórica tiver muitas categorias distintas.
 - Pode ser menos eficiente em termos de espaço e tempo, especialmente quando a variável categórica tem muitos valores.
