@@ -35,3 +35,23 @@ Por exemplo, em um banco de dados de uma escola:
 
 Os sistemas de gerenciamento de banco de dados (SGBD) oferecem ferramentas para definir, estabelecer e gerenciar esses relacionamentos, garantindo a integridade dos dados através de restrições e regras de integridade referencial.
 
+## Tipos de Chaves em Bancos de Dados
+
+1. **Chave Primária (Primary Key)**:
+   - Identifica exclusivamente cada registro em uma tabela.
+   - Deve ser única e não conter valores nulos.
+   - Exemplo: **ID_Aluno** na tabela **Aluno**.
+
+2. **Chave Estrangeira (Foreign Key)**:
+   - Estabelece um relacionamento entre tabelas.
+   - Refere-se a uma chave primária em outra tabela.
+   - Exemplo: **ID_Professor** na tabela **Professor_Relacao_Aluno**, referenciando **Professor**.
+
+3. **Chave Candidata (Candidate Key)**:
+   - Coluna ou conjunto de colunas que poderia ser uma chave primária.
+   - Exemplo: Email de um aluno pode ser uma chave candidata, desde que seja único.
+
+4. **Chave Composta (Composite Key)**:
+   - Combinação de duas ou mais colunas para criar uma chave única.
+   - Exemplo: Na tabela **Professor_Relacao_Aluno**, a combinação de **ID_Professor** e **ID_Aluno**.
+
