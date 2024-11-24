@@ -51,6 +51,10 @@ Os sistemas de gerenciamento de banco de dados (SGBD) oferecem ferramentas para 
    - Coluna ou conjunto de colunas que poderia ser uma chave primária.
    - Exemplo: Email de um aluno pode ser uma chave candidata, desde que seja único.
   
+4. **Chave Composta (Composite Key)**:
+   - Combinação de duas ou mais colunas para criar uma chave única.
+   - Exemplo: Na tabela **Professor_Relacao_Aluno**, a combinação de **ID_Professor** e **ID_Aluno**.
+  
 ### Integridade Referencial
 
 Integridade referencial é um conceito fundamental em bancos de dados relacionais que garante a consistência e a confiabilidade das relações entre tabelas. No contexto de um banco de dados relacional, as tabelas estão frequentemente interligadas por meio de chaves estrangeiras. A integridade referencial assegura que estas relações entre tabelas se mantenham válidas e consistentes.
@@ -64,7 +68,5 @@ A integridade referencial é essencial para evitar erros e inconsistências nos 
 Mecanismos para gerenciar a integridade referencial, como cascata de exclusão ou atualização, são fornecidos por sistemas de gerenciamento de banco de dados para lidar com situações em que registros relacionados precisam ser modificados ou excluídos.
 
 
-4. **Chave Composta (Composite Key)**:
-   - Combinação de duas ou mais colunas para criar uma chave única.
-   - Exemplo: Na tabela **Professor_Relacao_Aluno**, a combinação de **ID_Professor** e **ID_Aluno**.
+
 
