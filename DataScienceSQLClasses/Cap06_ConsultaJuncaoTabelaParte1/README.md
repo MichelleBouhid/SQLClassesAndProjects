@@ -3,7 +3,7 @@
 Relacionamento entre tabelas de um banco de dados refere-se à conexão estabelecida entre duas ou mais tabelas com base em um ou mais campos em comum, permitindo associar, combinar e recuperar dados de múltiplas tabelas de maneira eficiente. Os relacionamentos são fundamentais em bancos de dados relacionais para garantir a integridade e consistência dos dados, além de evitar redundâncias.
 
 #### Diagrama de Relacionamento
-![Diagrama de Relacionamento](caminho/para/a/imagem.png)
+![Diagrama de Relacionamento](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap06_ConsultaJuncaoTabelaParte1/RelacionamentoTabelas.png)
 
 ## Principais Tipos de Relacionamentos Entre Tabelas
 
