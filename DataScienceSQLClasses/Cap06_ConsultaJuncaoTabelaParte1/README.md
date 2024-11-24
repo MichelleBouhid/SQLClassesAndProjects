@@ -50,6 +50,19 @@ Os sistemas de gerenciamento de banco de dados (SGBD) oferecem ferramentas para 
 3. **Chave Candidata (Candidate Key)**:
    - Coluna ou conjunto de colunas que poderia ser uma chave primária.
    - Exemplo: Email de um aluno pode ser uma chave candidata, desde que seja único.
+  
+### Integridade Referencial
+
+Integridade referencial é um conceito fundamental em bancos de dados relacionais que garante a consistência e a confiabilidade das relações entre tabelas. No contexto de um banco de dados relacional, as tabelas estão frequentemente interligadas por meio de chaves estrangeiras. A integridade referencial assegura que estas relações entre tabelas se mantenham válidas e consistentes.
+
+Por exemplo, se uma tabela "A" tem uma chave estrangeira que aponta para uma chave primária em outra tabela "B", a integridade referencial garante que para cada registro em "A" que tenha uma referência em "B", deve existir um registro correspondente em "B". Isso evita situações em que um registro em "A" apontaria para um registro inexistente em "B", o que comprometeria a confiabilidade dos dados.
+
+Além disso, a integridade referencial também determina que qualquer tentativa de excluir um registro em "B" que seja referenciado por um registro em "A" será rejeitada, a menos que medidas adicionais, como a exclusão em cascata, sejam implementadas. Da mesma forma, tentativas de inserir ou atualizar registros em "A" que não tenham correspondência válida em "B" também serão bloqueadas.
+
+A integridade referencial é essencial para evitar erros e inconsistências nos dados, garantindo que as relações entre as tabelas sejam sempre válidas e representem fielmente a realidade modelada no banco de dados.
+
+Mecanismos para gerenciar a integridade referencial, como cascata de exclusão ou atualização, são fornecidos por sistemas de gerenciamento de banco de dados para lidar com situações em que registros relacionados precisam ser modificados ou excluídos.
+
 
 4. **Chave Composta (Composite Key)**:
    - Combinação de duas ou mais colunas para criar uma chave única.
