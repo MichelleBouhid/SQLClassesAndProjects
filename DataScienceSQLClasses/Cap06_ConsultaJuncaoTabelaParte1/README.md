@@ -84,7 +84,7 @@ Usando o exemplo anterior de duas tabelas, "Clientes" e "Pedidos", um **LEFT JOI
 O **"LEFT JOIN"** é particularmente útil quando se deseja obter todos os registros de uma tabela (a tabela à esquerda) e as correspondências possíveis de outra tabela (a tabela à direita). A decisão de usar um **"LEFT JOIN"** surge quando se deseja garantir que todos os registros da tabela principal sejam exibidos, mesmo que não haja correspondência na tabela secundária.
 
 
-![Junção de Tabelas](attachment-path/image.png)
+![Junção de Tabelas](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap06_ConsultaJuncaoTabelaParte1/joins.png)
 
 
 
