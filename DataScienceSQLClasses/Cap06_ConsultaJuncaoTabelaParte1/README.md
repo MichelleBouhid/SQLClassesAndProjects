@@ -67,6 +67,24 @@ A integridade referencial é essencial para evitar erros e inconsistências nos 
 
 Mecanismos para gerenciar a integridade referencial, como cascata de exclusão ou atualização, são fornecidos por sistemas de gerenciamento de banco de dados para lidar com situações em que registros relacionados precisam ser modificados ou excluídos.
 
+### INNER JOIN - Conceito e quando usar:
+
+O **"INNER JOIN"** é uma operação em bancos de dados relacionais que combina registros de duas ou mais tabelas baseado em uma condição de correspondência entre elas. Especificamente, ele retorna todas as linhas quando há pelo menos uma correspondência nas tabelas que estão sendo unidas.
+
+Para visualizar o funcionamento do **"INNER JOIN"**, imagine duas tabelas: uma tabela "Clientes" e outra tabela "Pedidos". Se quisermos listar todos os clientes e seus respectivos pedidos, poderíamos usar um **INNER JOIN** baseado no ID do cliente, que estaria presente em ambas as tabelas. O resultado desta operação incluiria somente os clientes que fizeram pelo menos um pedido, excluindo clientes que não fizeram nenhum pedido e pedidos que, por alguma razão, não tenham um cliente associado.
+
+A decisão de usar o **"INNER JOIN"** se dá quando se deseja obter registros que tenham correspondência em ambas as tabelas envolvidas. Isso significa que, se um registro de uma tabela não tiver uma correspondência na outra tabela, ele não aparecerá no resultado final.
+
+### LEFT JOIN - Conceito e quando usar:
+
+O **"LEFT JOIN"**, também conhecido como **"LEFT OUTER JOIN"**, é uma operação em bancos de dados relacionais que combina registros de duas tabelas, retornando todos os registros da tabela à esquerda (a primeira tabela mencionada na instrução JOIN) e os registros correspondentes da tabela à direita (a segunda tabela). Se não houver uma correspondência para um registro específico da tabela à esquerda na tabela à direita, os campos desta última no resultado final serão preenchidos com valores nulos.
+
+Usando o exemplo anterior de duas tabelas, "Clientes" e "Pedidos", um **LEFT JOIN** entre elas, baseado no ID do cliente, retornaria todos os clientes, independentemente de eles terem feito um pedido ou não. Para os clientes que fizeram pedidos, veríamos os detalhes dos pedidos. Para os clientes que não fizeram pedidos, os campos relacionados aos pedidos seriam nulos no conjunto de resultados.
+
+O **"LEFT JOIN"** é particularmente útil quando se deseja obter todos os registros de uma tabela (a tabela à esquerda) e as correspondências possíveis de outra tabela (a tabela à direita). A decisão de usar um **"LEFT JOIN"** surge quando se deseja garantir que todos os registros da tabela principal sejam exibidos, mesmo que não haja correspondência na tabela secundária.
+
+
+![Junção de Tabelas](attachment-path/image.png)
 
 
 
