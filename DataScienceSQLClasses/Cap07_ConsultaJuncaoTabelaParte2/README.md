@@ -34,7 +34,30 @@ O **SELF JOIN** é uma técnica onde uma tabela é unida a si mesma. É usado pa
 
 - **SELF JOIN** é usado quando há uma razão para comparar ou combinar registros dentro da mesma tabela, como encontrar pares de registros que tenham valores similares em determinadas colunas.
 
+---
 
+### UNION e UNION ALL
+
+
+-- O UNION e o UNION ALL são operadores em SQL usados para combinar os resultados 
+-- de duas ou mais consultas em um único conjunto de resultados.
+
+-- O UNION combina os resultados de duas consultas e remove quaisquer linhas duplicadas 
+-- para produzir um conjunto de resultados único. 
+-- As colunas e os tipos de dados nas consultas que estão sendo unidas devem ser os mesmos 
+-- para que o UNION funcione.
+
+-- O UNION ALL, por outro lado, combina os resultados de duas consultas e inclui todas as linhas, 
+-- incluindo duplicatas. Ele é frequentemente mais rápido do que o UNION porque não precisa 
+-- verificar a unicidade das linhas.
+
+-- Representação gráfica:
+-- UNION: Combina os resultados sem duplicatas.
+-- UNION ALL: Combina os resultados incluindo duplicatas.
+
+![Representação gráfica do UNION e UNION ALL](images/union_unionall.png)
+
+---
 
 ## Por que usar aliases (como `p` e `pr`)?
 
