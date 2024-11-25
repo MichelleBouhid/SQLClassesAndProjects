@@ -34,3 +34,78 @@ O **SELF JOIN** é uma técnica onde uma tabela é unida a si mesma. É usado pa
 
 - **SELF JOIN** é usado quando há uma razão para comparar ou combinar registros dentro da mesma tabela, como encontrar pares de registros que tenham valores similares em determinadas colunas.
 
+
+
+## Por que usar aliases (como `p` e `pr`)?
+
+Os aliases (`p` para `pedidos` e `pr` para `produtos`) servem para **abreviar os nomes das tabelas** em consultas SQL, facilitando a escrita e evitando ambiguidades. Quando você tem tabelas diferentes que compartilham colunas com nomes iguais (por exemplo, `id_produto` em `pedidos` e `produtos`), é necessário especificar **de qual tabela cada coluna vem**.
+
+
+## Razões para especificar a tabela (com ou sem aliases)
+
+
+-- Evitar ambiguidades:
+-- Quando duas ou mais tabelas têm colunas com o mesmo nome, o SQL precisa saber de qual tabela cada coluna pertence. Exemplo:
+
+```sql
+SELECT id_produto FROM pedidos, produtos;
+-- Isso causaria erro porque o SQL não saberia qual id_produto você quer selecionar.
+
+-- Com tabelas explícitas:
+SELECT pedidos.id_produto FROM pedidos;
+
+-- Com aliases:
+SELECT p.id_produto FROM pedidos p;
+```
+
+## Tornar o código mais curto e legível:
+
+
+-- Imagine uma consulta longa onde você tem que digitar cap08.pedidos ou cap08.produtos toda vez.
+-- Isso pode deixar o código pesado e difícil de ler.
+
+-- Usar aliases (p e pr) torna o código mais conciso:
+```sql
+SELECT p.id_produto, pr.nome
+FROM cap08.pedidos p
+JOIN cap08.produtos pr ON p.id_produto = pr.id_produto;
+```
+
+## Melhor organização em joins complexos:
+
+
+-- Em consultas com várias tabelas, o uso de aliases ajuda a identificar rapidamente a origem de cada coluna.
+
+-- Com aliases:
+```sql
+SELECT c.nome, p.id_produto, pr.nome
+FROM cap08.clientes c
+JOIN cap08.pedidos p ON c.id_cliente = p.id_cliente
+JOIN cap08.produtos pr ON p.id_produto = pr.id_produto;
+```
+-- Sem aliases, o código ficaria muito longo e confuso:
+```sql
+SELECT cap08.clientes.nome, cap08.pedidos.id_produto, cap08.produtos.nome
+FROM cap08.clientes
+JOIN cap08.pedidos ON cap08.clientes.id_cliente = cap08.pedidos.id_cliente
+JOIN cap08.produtos ON cap08.pedidos.id_produto = cap08.produtos.id_produto;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
