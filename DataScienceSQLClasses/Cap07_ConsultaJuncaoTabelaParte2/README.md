@@ -55,7 +55,7 @@ O **SELF JOIN** é uma técnica onde uma tabela é unida a si mesma. É usado pa
 -- UNION: Combina os resultados sem duplicatas.
 -- UNION ALL: Combina os resultados incluindo duplicatas.
 
-![Representação gráfica do UNION e UNION ALL](images/union_unionall.png)
+![Representação gráfica do UNION e UNION ALL](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap07_ConsultaJuncaoTabelaParte2/unionall.png)
 
 ---
 
