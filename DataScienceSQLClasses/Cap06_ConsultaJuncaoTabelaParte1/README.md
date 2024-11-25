@@ -1,11 +1,11 @@
-### Relacionamento entre Tabelas
+## Relacionamento entre Tabelas
 
 Relacionamento entre tabelas de um banco de dados refere-se à conexão estabelecida entre duas ou mais tabelas com base em um ou mais campos em comum, permitindo associar, combinar e recuperar dados de múltiplas tabelas de maneira eficiente. Os relacionamentos são fundamentais em bancos de dados relacionais para garantir a integridade e consistência dos dados, além de evitar redundâncias.
 
 #### Diagrama de Relacionamento
 ![Diagrama de Relacionamento](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap06_ConsultaJuncaoTabelaParte1/RelacionamentoTabelas.png)
 
-## Principais Tipos de Relacionamentos Entre Tabelas
+### Principais Tipos de Relacionamentos Entre Tabelas
 
 ### Um Para Um (1:1)
 Cada registro em uma tabela corresponde a um único registro em outra tabela. Por exemplo, cada pessoa tem um único CPF. Portanto, você poderia ter uma tabela de pessoas e uma tabela de cadastro de CPFs, e elas teriam um relacionamento um para um.
@@ -35,7 +35,7 @@ Por exemplo, em um banco de dados de uma escola:
 
 Os sistemas de gerenciamento de banco de dados (SGBD) oferecem ferramentas para definir, estabelecer e gerenciar esses relacionamentos, garantindo a integridade dos dados através de restrições e regras de integridade referencial.
 
-## Tipos de Chaves em Bancos de Dados
+### Tipos de Chaves em Bancos de Dados
 
 1. **Chave Primária (Primary Key)**:
    - Identifica exclusivamente cada registro em uma tabela.
@@ -56,7 +56,7 @@ Os sistemas de gerenciamento de banco de dados (SGBD) oferecem ferramentas para 
    - Exemplo: Na tabela **Professor_Relacao_Aluno**, a combinação de **ID_Professor** e **ID_Aluno**.
   
 ### Integridade Referencial
-
+---
 Integridade referencial é um conceito fundamental em bancos de dados relacionais que garante a consistência e a confiabilidade das relações entre tabelas. No contexto de um banco de dados relacional, as tabelas estão frequentemente interligadas por meio de chaves estrangeiras. A integridade referencial assegura que estas relações entre tabelas se mantenham válidas e consistentes.
 
 Por exemplo, se uma tabela "A" tem uma chave estrangeira que aponta para uma chave primária em outra tabela "B", a integridade referencial garante que para cada registro em "A" que tenha uma referência em "B", deve existir um registro correspondente em "B". Isso evita situações em que um registro em "A" apontaria para um registro inexistente em "B", o que comprometeria a confiabilidade dos dados.
@@ -67,6 +67,8 @@ A integridade referencial é essencial para evitar erros e inconsistências nos 
 
 Mecanismos para gerenciar a integridade referencial, como cascata de exclusão ou atualização, são fornecidos por sistemas de gerenciamento de banco de dados para lidar com situações em que registros relacionados precisam ser modificados ou excluídos.
 
+---
+
 ### INNER JOIN - Conceito e quando usar:
 
 O **"INNER JOIN"** é uma operação em bancos de dados relacionais que combina registros de duas ou mais tabelas baseado em uma condição de correspondência entre elas. Especificamente, ele retorna todas as linhas quando há pelo menos uma correspondência nas tabelas que estão sendo unidas.
@@ -74,6 +76,8 @@ O **"INNER JOIN"** é uma operação em bancos de dados relacionais que combina 
 Para visualizar o funcionamento do **"INNER JOIN"**, imagine duas tabelas: uma tabela "Clientes" e outra tabela "Pedidos". Se quisermos listar todos os clientes e seus respectivos pedidos, poderíamos usar um **INNER JOIN** baseado no ID do cliente, que estaria presente em ambas as tabelas. O resultado desta operação incluiria somente os clientes que fizeram pelo menos um pedido, excluindo clientes que não fizeram nenhum pedido e pedidos que, por alguma razão, não tenham um cliente associado.
 
 A decisão de usar o **"INNER JOIN"** se dá quando se deseja obter registros que tenham correspondência em ambas as tabelas envolvidas. Isso significa que, se um registro de uma tabela não tiver uma correspondência na outra tabela, ele não aparecerá no resultado final.
+
+---
 
 ### LEFT JOIN - Conceito e quando usar:
 
@@ -85,6 +89,79 @@ O **"LEFT JOIN"** é particularmente útil quando se deseja obter todos os regis
 
 
 ![Junção de Tabelas](https://github.com/MichelleBouhid/SQLClassesAndProjects/blob/main/DataScienceSQLClasses/Cap06_ConsultaJuncaoTabelaParte1/joins.png)
+
+---
+### Explicando melhor o que significa "tabela à direita" e "tabela à esquerda" em um JOIN: 
+
+Seja ele um LEFT JOIN ou um RIGHT JOIN. Tudo depende da ordem em que as tabelas aparecem na consulta.
+
+### Entendendo "direita" e "esquerda" nos JOINs
+
+**1. Esquerda:** É a primeira tabela mencionada na consulta SQL, logo após o FROM.
+
+**2. Direita:**  É a segunda tabela mencionada na consulta, logo após o JOIN.
+
+**Exemplo:**
+```sql
+FROM cap08.produtos pr
+LEFT JOIN cap08.pedidos p ON pr.id_produto = p.id_produto
+```
+Aqui, cap08.produtos é a tabela à esquerda e cap08.pedidos é a tabela à direita.
+
+
+### Diferença entre LEFT JOIN e RIGHT JOIN
+
+**LEFT JOIN:**
+
+Retorna todos os registros da tabela à esquerda (primeira tabela) e quando não há correspondência na tabela à direita, preenche com NULL.
+
+**Exemplo:**
+```sql
+FROM cap08.produtos pr
+LEFT JOIN cap08.pedidos p ON pr.id_produto = p.id_produto
+```
+
+Tabela à esquerda: cap08.produtos - Todos os produtos aparecem no resultado.
+
+Tabela à direita: cap08.pedidos - Somente os pedidos associados a produtos aparecem.
+
+**RIGHT JOIN:**
+
+Retorna todos os registros da tabela à direita (segunda tabela) e quando não há correspondência na tabela à esquerda, preenche com NULL.
+
+**Exemplo:**
+
+```sql
+FROM cap08.pedidos p
+RIGHT JOIN cap08.produtos pr ON pr.id_produto = p.id_produto
+```
+Tabela à esquerda: cap08.pedidos - Somente os pedidos aparecem, caso associados.
+
+Tabela à direita: cap08.produtos - Todos os produtos aparecem no resultado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
